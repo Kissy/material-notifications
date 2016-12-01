@@ -16,17 +16,20 @@ html {
     box-sizing: border-box;
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
 }
+
 .notification-header {
     font-size: 22px;
     line-height: 32px;
     padding-left: 40px;
     margin-bottom: 4px;
 }
+
 .notification-header-image {
     width: 32px;
     height: 32px;
     float: left;
 }
+
 .notification-people {
     display: inline-block;
     position: absolute;
@@ -36,46 +39,54 @@ html {
     height: 75px;
     border-radius: 50%;
 }
+
 .notification-content {
-    white-space:nowrap;
+    white-space: nowrap;
 }
+
 .notification-content-title {
     font-size: 24px;
     line-height: 38px;
     margin: 0;
     padding-top: 6px;
 }
+
 .notification-content-text {
     color: rgba(0, 0, 0, .54);
     font-size: 24px;
     line-height: 32px;
     margin: 0;
 }
+
 .gitlab-title {
     color: #E64A19;
 }
 
 /* closed */
 .notification.closed {
-    width: 100px;
-    height: 100px;
-    top: 56px;
-    left: 292px;
-    border-radius: 4px;
+    width: 50px;
+    height: 50px;
+    top: 126px;
+    left: 317px;
+    border-radius: 5px;
+    padding: 9px;
 }
-.notification.closed .notification-people {
-    right: 13px;
-    bottom: 13px;
-}
+
 .notification.closed .notification-header-image {
+}
+
+.notification.closed .notification-people {
     opacity: 0;
 }
+
 .notification.closed .notification-header {
     opacity: 0;
 }
+
 .notification.closed .notification-content-title {
     opacity: 0;
 }
+
 .notification.closed .notification-content-text {
     opacity: 0;
 }
@@ -83,35 +94,36 @@ html {
 /* animation */
 .notification {
     transition: border-radius 375ms cubic-bezier(0.4, 0.0, 0.2, 1),
-                left 275ms cubic-bezier(0.4, 0.0, 0.2, 1),
-                width 275ms cubic-bezier(0.4, 0.0, 0.2, 1),
-                top 350ms cubic-bezier(0.4, 0.0, 0.2, 1) 25ms,
-                height 350ms cubic-bezier(0.4, 0.0, 0.2, 1) 25ms;
-}
-.notification.closed {
-    transition: left 325ms cubic-bezier(0.4, 0.0, 0.2, 1) 50ms,
-                width 325ms cubic-bezier(0.4, 0.0, 0.2, 1) 50ms,
-                top 325ms cubic-bezier(0.4, 0.0, 0.2, 1),
-                height 325ms cubic-bezier(0.4, 0.0, 0.2, 1);
+    padding-right 275ms cubic-bezier(0.4, 0.0, 0.2, 1),
+    padding-left 275ms cubic-bezier(0.4, 0.0, 0.2, 1),
+    left 275ms cubic-bezier(0.4, 0.0, 0.2, 1),
+    width 275ms cubic-bezier(0.4, 0.0, 0.2, 1),
+    padding-top 250ms cubic-bezier(0.4, 0.0, 0.2, 1) 25ms,
+    padding-bottom 250ms cubic-bezier(0.4, 0.0, 0.2, 1) 25ms,
+    top 350ms cubic-bezier(0.4, 0.0, 0.2, 1) 25ms,
+    height 350ms cubic-bezier(0.4, 0.0, 0.2, 1) 25ms;
 }
 
-.notification-people {
-    transition: right 275ms cubic-bezier(0.4, 0.0, 0.2, 1),
-                bottom 350ms cubic-bezier(0.4, 0.0, 0.2, 1) 25ms;
-}
-.notification.closed .notification-people {
-    transition: right 325ms cubic-bezier(0.4, 0.0, 0.2, 1) 50ms,
-                bottom 325ms cubic-bezier(0.4, 0.0, 0.2, 1);
+.notification.closed {
+    transition: padding-right 325ms cubic-bezier(0.4, 0.0, 0.2, 1) 50ms,
+    padding-left 325ms cubic-bezier(0.4, 0.0, 0.2, 1) 50ms,
+    left 325ms cubic-bezier(0.4, 0.0, 0.2, 1) 50ms,
+    width 325ms cubic-bezier(0.4, 0.0, 0.2, 1) 50ms,
+    padding-top 325ms cubic-bezier(0.4, 0.0, 0.2, 1),
+    padding-bottom 325ms cubic-bezier(0.4, 0.0, 0.2, 1),
+    top 325ms cubic-bezier(0.4, 0.0, 0.2, 1),
+    height 325ms cubic-bezier(0.4, 0.0, 0.2, 1);
 }
 
 .notification-header,
-.notification-header-image,
+.notification-people,
 .notification-content-title,
 .notification-content-text {
     transition: opacity 150ms cubic-bezier(0.4, 0.0, 0.2, 1) 75ms;
 }
+
 .notification.closed .notification-header,
-.notification.closed .notification-header-image,
+.notification.closed .notification-people,
 .notification.closed .notification-content-title,
 .notification.closed .notification-content-text {
     transition: opacity 75ms cubic-bezier(0.4, 0.0, 0.2, 1);
