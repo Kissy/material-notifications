@@ -1,8 +1,8 @@
 function toggleNotif() {
-    var notif = document.querySelector(".notification");
-    if (notif.classList.contains("closed")) {
-        notif.classList.remove("closed");
+    var notif = document.querySelector(".notification-container");
+    if (notif.classList.contains("notification-closed")) {
+        notif.classList.remove("notification-closed");
     } else {
-        notif.classList.add("closed");
+        notif.classList.add("notification-closed");
     }
 }
